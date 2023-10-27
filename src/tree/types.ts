@@ -19,133 +19,271 @@ export interface ResNode {
 }
 
 export const attributes = ['КИ', 'Долг', 'Поручители', 'Доход'];
-export const data: DataRow[] = [
+// export const data: DataRow[] = [
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'П' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '0-15' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Н' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '15-35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Ср' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Н' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '15-35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Н' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '0-15' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Н' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Н' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Н' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Н' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'А' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'П' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '0-15' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Ср' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'П' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'А' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Н' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Хор' },
+//       { varName: 'Долг', varValue: 'Н' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Н' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Хор' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'А' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Хор' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '0-15' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Ср' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Хор' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '15-35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'Н' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'Хор' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '>35' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Риск', varValue: 'В' },
+//     attributeVars: [
+//       { varName: 'КИ', varValue: 'П' },
+//       { varName: 'Долг', varValue: 'В' },
+//       { varName: 'Поручители', varValue: 'Н' },
+//       { varName: 'Доход', varValue: '15-35' },
+//     ]
+//   },
+// ]
+
+export const data: DataRow[] = [ // какую музыку послушать?))
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'П' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '0-15' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'Н' },
+      { varName: 'Скидка', varValue: '5-10%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Н' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '15-35' },
+      { varName: 'Курс доллара', varValue: '105+' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Ср' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Н' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '15-35' },
+      { varName: 'Курс доллара', varValue: '95-100' },
+      { varName: 'Кризис', varValue: 'Н' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Н' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '0-15' },
+      { varName: 'Курс доллара', varValue: '95-100' },
+      { varName: 'Кризис', varValue: 'Ср' },
+      { varName: 'Скидка', varValue: '5-10%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Н' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Н' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Н' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Н' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'А' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'П' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '0-15' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '5-10%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Ср' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'П' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'А' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '5-10%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Н' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Хор' },
-      { varName: 'Долг', varValue: 'Н' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'Н' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Н' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Хор' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'А' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'Н' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Хор' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '0-15' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'Ср' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Ср' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Хор' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '15-35' },
+      { varName: 'Курс доллара', varValue: '90-95' },
+      { varName: 'Кризис', varValue: 'Ср' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Лето' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'Н' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'Хор' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '>35' },
+      { varName: 'Курс доллара', varValue: '95-100' },
+      { varName: 'Кризис', varValue: 'В' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
   {
-    yVar: { varName: 'Риск', varValue: 'В' },
+    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
     attributeVars: [
-      { varName: 'КИ', varValue: 'П' },
-      { varName: 'Долг', varValue: 'В' },
-      { varName: 'Поручители', varValue: 'Н' },
-      { varName: 'Доход', varValue: '15-35' },
+      { varName: 'Курс доллара', varValue: '95-100' },
+      { varName: 'Кризис', varValue: 'Ср' },
+      { varName: 'Скидка', varValue: '0%' },
+      { varName: 'Сезон', varValue: 'Зима' },
     ]
   },
+  {
+    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    attributeVars: [
+      { varName: 'Курс доллара', varValue: '95-100' },
+      { varName: 'Кризис', varValue: 'Н' },
+      { varName: 'Скидка', varValue: '5-10%' },
+      { varName: 'Сезон', varValue: 'Зима' },
+    ]
+  }
 ]
 
 export const groupedAttribute = data.reduce((acc, currDataRow) => {
