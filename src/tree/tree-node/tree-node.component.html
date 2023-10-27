@@ -1,0 +1,19 @@
+<div class="tree-node">
+   <div
+     *ngIf="node"
+     class="node-value"
+   >
+     <div *ngIf="node.condition" class="node-value__condition">Если "{{ node.condition }}"</div>
+      <div *ngIf="node.attrName">
+        {{ node.attrName }}
+      </div>
+     <div *ngIf="node.y">
+       {{ node.y }}
+     </div>
+   </div>
+   <div *ngIf="node?.children" class="children-container">
+     <div *ngFor="let nd of node?.children" class="child">
+       <app-tree-node [node]="nd"></app-tree-node>
+     </div>
+   </div>
+</div>

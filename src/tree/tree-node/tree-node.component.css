@@ -1,0 +1,43 @@
+
+.children-container {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  padding: 10px 0 10px 125px;
+  position: relative;
+}
+
+.children-container::before {
+  content: '';
+  position: absolute;
+  left: -0px;
+  bottom: -10px;
+  height: 100%;
+  border-left: 1px dotted;
+}
+
+.child {
+  margin-top: 15px;
+  position: relative;
+}
+
+.child::before {
+  content: "";
+  left: -125px;
+  width: 115px;
+  border-left: 1px dotted;
+  border-bottom: 1px dotted;
+  position: absolute;
+}
+
+.node-value__condition {
+  position: absolute;
+  bottom: 100%;
+  left: -100px;
+}
+
+.node-value {
+  position: relative;
+}
+
+
