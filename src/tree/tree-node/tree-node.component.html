@@ -3,13 +3,14 @@
      *ngIf="node"
      class="node-value"
    >
-     <div *ngIf="node.condition" class="node-value__condition">Если "{{ node.condition }}"</div>
-      <div *ngIf="node.attrName">
+      <span *ngIf="node.condition" class="node-value__condition">Если "{{ node.condition }}"</span>
+      <span *ngIf="node.attrName" class="node-value__content node-value__attr">
         {{ node.attrName }}
-      </div>
-     <div *ngIf="node.y">
-       {{ node.y }}
-     </div>
+      </span>
+       <span *ngIf="node.y" class="node-value__content node-value__y">
+         {{ node.y }}
+       </span>
+      <span class="node-value__service-values">(Неопред: {{ node.commonUncertainty.toPrecision(2) }})</span>
    </div>
    <div *ngIf="node?.children" class="children-container">
      <div *ngFor="let nd of node?.children" class="child">
