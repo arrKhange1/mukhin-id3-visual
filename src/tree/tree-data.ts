@@ -32,6 +32,7 @@ function calculateUncertainty(groupedResults: {[p: string]: number}, dataRowsFor
 
 // full iteration func
 export function getAttrWithMinUncertainty(dataRows: DataRow[], attrs: string[]): ResNode {
+  console.log(groupedAttribute)
   let minUncertainty = Infinity;
   let minAttrNode: ResNode = {
     dataRows: [],

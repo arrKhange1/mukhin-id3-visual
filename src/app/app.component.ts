@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private changeDetectorRef: ChangeDetectorRef) {
   }
   public ngOnInit(): void {
-    const rootNode = getAttrWithMinUncertainty(data, ['Курс доллара', 'Кризис', 'Скидка', 'Сезон']);
+    const rootNode = getAttrWithMinUncertainty(data, ['Настроение', 'Обстановка', 'Окружение', 'Занятие']);
     findTree(rootNode);
     this.rootNode = rootNode;
     this.changeDetectorRef.markForCheck();

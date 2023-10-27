@@ -148,143 +148,352 @@ export const attributes = ['КИ', 'Долг', 'Поручители', 'Дохо
 //   },
 // ]
 
-export const data: DataRow[] = [ // какую музыку послушать?))
+// export const data: DataRow[] = [ // какую видюху купить
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'Н' },
+//       { varName: 'Скидка', varValue: '5-10%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '105+' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '95-100' },
+//       { varName: 'Кризис', varValue: 'Н' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '95-100' },
+//       { varName: 'Кризис', varValue: 'Ср' },
+//       { varName: 'Скидка', varValue: '5-10%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '5-10%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '5-10%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'Н' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'Н' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'Ср' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '90-95' },
+//       { varName: 'Кризис', varValue: 'Ср' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Лето' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '95-100' },
+//       { varName: 'Кризис', varValue: 'В' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '95-100' },
+//       { varName: 'Кризис', varValue: 'Ср' },
+//       { varName: 'Скидка', varValue: '0%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   },
+//   {
+//     yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+//     attributeVars: [
+//       { varName: 'Курс доллара', varValue: '95-100' },
+//       { varName: 'Кризис', varValue: 'Н' },
+//       { varName: 'Скидка', varValue: '5-10%' },
+//       { varName: 'Сезон', varValue: 'Зима' },
+//     ]
+//   }
+// ];
+
+
+// какую музыку слушать? Рэп, классика, поп
+// зависит от: настроение (Плохое, Хорошее), обстановка (дома, на вечеринке),
+// с кем я (друзья, девушка, родители, один), занятие (расслабляюсь, веселюсь)
+export const data: DataRow[] = [ // какую музыку послушать
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'Н' },
-      { varName: 'Скидка', varValue: '5-10%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Один' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '105+' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '95-100' },
-      { varName: 'Кризис', varValue: 'Н' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Девушка' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '95-100' },
-      { varName: 'Кризис', varValue: 'Ср' },
-      { varName: 'Скидка', varValue: '5-10%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Поп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '5-10%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Поп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '5-10%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Девушка' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Поп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'Н' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Девушка' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'Н' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Поп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'Ср' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Хорошее' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '90-95' },
-      { varName: 'Кризис', varValue: 'Ср' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Лето' },
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Один' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '95-100' },
-      { varName: 'Кризис', varValue: 'В' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Девушка' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Нет' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '95-100' },
-      { varName: 'Кризис', varValue: 'Ср' },
-      { varName: 'Скидка', varValue: '0%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
   },
   {
-    yVar: { varName: 'Купить видеокарту', varValue: 'Да' },
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
     attributeVars: [
-      { varName: 'Курс доллара', varValue: '95-100' },
-      { varName: 'Кризис', varValue: 'Н' },
-      { varName: 'Скидка', varValue: '5-10%' },
-      { varName: 'Сезон', varValue: 'Зима' },
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Дома' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
     ]
-  }
-]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Один' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Классика' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Расслабляюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Один' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Друзья' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Родители' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
+    ]
+  },
+  {
+    yVar: { varName: 'Жанр музыки', varValue: 'Рэп' },
+    attributeVars: [
+      { varName: 'Настроение', varValue: 'Плохое' },
+      { varName: 'Обстановка', varValue: 'Вечеринка' },
+      { varName: 'Окружение', varValue: 'Девушка' },
+      { varName: 'Занятие', varValue: 'Веселюсь' },
+    ]
+  },
+];
+
+// какую музыку слушать? Рэп, классика, поп
+// зависит от: настроение (Плохое, Хорошее), обстановка (дома, на вечеринке),
+// с кем я (друзья, девушка, родители, один), занятие (расслабляюсь, веселюсь)
 
 export const groupedAttribute = data.reduce((acc, currDataRow) => {
   for (const v of currDataRow.attributeVars) {
