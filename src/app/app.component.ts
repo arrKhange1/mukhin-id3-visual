@@ -1,6 +1,5 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {data, ResNode} from "../tree/types";
-import {findTree, getAttrWithMinUncertainty} from "../tree/tree-data";
+import {ResNode} from "../tree/types";
 
 @Component({
   selector: 'app-root',
@@ -9,15 +8,8 @@ import {findTree, getAttrWithMinUncertainty} from "../tree/tree-data";
 })
 export class AppComponent implements OnInit {
 
-  protected rootNode?: ResNode;
-
-  constructor(private changeDetectorRef: ChangeDetectorRef) {
-  }
   public ngOnInit(): void {
-    const rootNode = getAttrWithMinUncertainty(data, ['Настроение', 'Обстановка', 'Окружение', 'Занятие']);
-    findTree(rootNode);
-    this.rootNode = rootNode;
-    this.changeDetectorRef.markForCheck();
+
   }
 
 }

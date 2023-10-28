@@ -3,7 +3,7 @@
   display: flex;
   gap: 5px;
   flex-direction: column;
-  padding: 10px 0 10px 125px;
+  padding: 10px 0 10px 200px;
   position: relative;
 }
 
@@ -23,8 +23,8 @@
 
 .child::before {
   content: "";
-  left: -125px;
-  width: 115px;
+  left: -200px;
+  width: 185px;
   top: 10px;
   border-left: 1px dotted;
   border-bottom: 1px dotted;
@@ -35,7 +35,7 @@
   font-size: 0.95rem;
   position: absolute;
   bottom: 100%;
-  left: -100px;
+  left: -165px;
 }
 
 .node-value {

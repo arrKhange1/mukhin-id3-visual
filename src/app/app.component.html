@@ -1,1 +1,12 @@
-<app-tree-node *ngIf="rootNode" [node]="rootNode"></app-tree-node>
+<p-tabView>
+  <p-tabPanel header="Кредитные риски">
+    <app-class-example-data></app-class-example-data>
+  </p-tabPanel>
+  <p-tabPanel header="Покупка видеокарты">
+    <app-video-card-example-data></app-video-card-example-data>
+  </p-tabPanel>
+  <p-tabPanel header="Жанр музыки">
+    <app-music-genre-example-data></app-music-genre-example-data>
+  </p-tabPanel>
+</p-tabView>
+

@@ -1,4 +1,4 @@
-import {data, DataRow, groupedAttribute, ResNode} from "./types";
+import {DataRow, ResNode} from "./types";
 
 function getDataRowsForGroup(dataRows: DataRow[], attr: string, group: string): DataRow[] {
   const rows: DataRow[] = [];
@@ -31,8 +31,7 @@ function calculateUncertainty(groupedResults: {[p: string]: number}, dataRowsFor
 }
 
 // full iteration func
-export function getAttrWithMinUncertainty(dataRows: DataRow[], attrs: string[]): ResNode {
-  console.log(groupedAttribute)
+export function getAttrWithMinUncertainty(dataRows: DataRow[], attrs: string[], groupedDataByAttr: {[key: string]: Set<string>}): ResNode {
   let minUncertainty = Infinity;
   let minAttrNode: ResNode = {
     dataRows: [],
@@ -48,7 +47,7 @@ export function getAttrWithMinUncertainty(dataRows: DataRow[], attrs: string[]):
       ancestorAttrs: attrs
     };
     let attrUncertainty = 0;
-    for (const group of groupedAttribute[attr]) {
+    for (const group of groupedDataByAttr[attr]) {
       const dataRowsForGroup = getDataRowsForGroup(dataRows, attr, group);
       const groupedResults = groupDataRowsByResults(dataRowsForGroup);
       const groupUncertainty = calculateUncertainty(groupedResults, dataRowsForGroup);
@@ -74,14 +73,14 @@ export function getAttrWithMinUncertainty(dataRows: DataRow[], attrs: string[]):
   return minAttrNode;
 }
 
-export function findTree(node: ResNode): void {
+export function findTree(node: ResNode, groupedDataByAttr: {[key: string]: Set<string>}): void {
   for (let i= 0; i < node.children.length; ++i) {
     if (node.children[i].commonUncertainty !== 0) {
-      const clarifiedAttr = getAttrWithMinUncertainty(node.children[i].dataRows, node.children[i].ancestorAttrs);
+      const clarifiedAttr = getAttrWithMinUncertainty(node.children[i].dataRows, node.children[i].ancestorAttrs, groupedDataByAttr);
       clarifiedAttr.condition = node.children[i].condition;
       node.children[i] = clarifiedAttr;
       if (clarifiedAttr.commonUncertainty !== 0) {
-        findTree(clarifiedAttr);
+        findTree(clarifiedAttr, groupedDataByAttr);
       }
     }
   }

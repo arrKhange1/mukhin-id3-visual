@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {TreeModule} from "../tree/tree.module";
+import {TabViewModule} from "primeng/tabview";
+import {DataModule} from "../data/data.module";
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import {TreeModule} from "../tree/tree.module";
   ],
   imports: [
     BrowserModule,
-    TreeModule
+    TreeModule,
+    TabViewModule,
+    DataModule
   ],
   providers: [],
   bootstrap: [AppComponent]
