@@ -1,0 +1,21 @@
+<p-table
+  [columns]="attrs"
+  [value]="data"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th style="color: green; font-weight: bolder;">{{ data[0].yVar.varName }}</th>
+      <th *ngFor="let col of columns">
+        {{ col }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td style="font-weight: bolder;">{{ rowData.yVar.varValue }}</td>
+      <td *ngFor="let attr of rowData.attributeVars">
+        {{ attr.varValue }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

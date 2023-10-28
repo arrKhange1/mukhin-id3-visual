@@ -1,1 +1,4 @@
-<app-tree-node *ngIf="rootNode" [node]="rootNode"></app-tree-node>
+<div style="display: flex; gap: 1rem">
+  <app-tree-node *ngIf="rootNode" style="flex: 1" [node]="rootNode"></app-tree-node>
+  <app-data-table style="flex: 1" [data]="data" [attrs]="attrs"></app-data-table>
+</div>
